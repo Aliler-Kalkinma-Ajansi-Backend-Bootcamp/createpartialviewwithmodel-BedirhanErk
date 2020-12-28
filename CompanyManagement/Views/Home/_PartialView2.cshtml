@@ -1,0 +1,47 @@
+﻿@model IEnumerable<CompanyManagement.Models.Products>
+
+<br />
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                Product Name
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Brand)
+            </th>
+            <th>
+                Buying Price
+            </th>
+            <th>
+                Sale Price
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuyingPrice) ₺
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SalePrice) ₺
+            </td>           
+        </tr>
+}
+    </tbody>
+</table>
+<br />
